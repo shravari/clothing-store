@@ -84,7 +84,7 @@
       var currentUrl = $(location).attr('href');  
       if (currentUrl.match(/add=1/g)) {
          alert("Product added successfully!");
-          window.history.pushState({}, "Hide", "http://localhost/shravari/essence/addProduct.php");
+          window.history.pushState({}, "Hide", "http://localhost/shravari/essence/admin/addProduct.php");
 
       }
   </script>
