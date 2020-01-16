@@ -1,0 +1,42 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+nav{
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+}
+nav a{
+	color: #9F9A99;
+}
+nav li{
+	padding: 10px;
+}
+nav ul{
+	/*padding-left: 80px;*/
+	list-style-type: none;
+	/*
+	margin-left: 0px;
+	margin-right: 0px;*/
+}
+.nav_brand{
+	font-weight: bold;
+	font-size: 25px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.nav_fa{
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+input[type="search"]{
+	border:none;
+	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  	transition: width 2s;
+  	outline:none;
+}
+
+input[type="search"]:focus{
+	width: 300px;
+	
+}
