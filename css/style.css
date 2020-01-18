@@ -104,6 +104,9 @@ input[type="search"]:focus{
 		text-align: center;
 		color: #000000;
 	}
+	.overlay a:hover{
+		color: #6F79A4;
+	}
 	.category img{
 		max-width: 100%;
 		max-height: 100%;
@@ -137,3 +140,27 @@ input[type="search"]:focus{
 	width: 120px;
 	height: auto;
 }
+
+/*footer*/
+.footer{
+	padding: 60px;
+	background-color: #252525;
+	color:#a8a893;
+}
+.footer ul{
+	list-style-type: none;
+	/*display: inline-block;*/
+}
+.social_media ul{
+	font-size: 13px;
+}
+.icons{
+	margin-left: 40px;
+	margin-top: 50px;
+}
+.icons i{
+	margin: 10px;
+	color: white;
+}
+
+/*footer*/
