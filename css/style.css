@@ -16,6 +16,9 @@ nav{
 nav a{
 	color: #9F9A99;
 }
+nav a:hover{
+	color: black;
+}
 nav li{
 	padding: 10px;
 }
