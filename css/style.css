@@ -195,3 +195,79 @@ input[type="search"]:focus{
 	color: #7F8081;
 	margin-top :70px;
 }
+/*contact.html*/
+
+/*blog.html*/
+.blog_banner{
+	background-image: url(../images/bg-img/breadcumb2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.blog_banner div{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.blog_banner h1{
+	padding: 160px;
+	font-size: 70px;
+	text-align: center;
+	font-weight: bolder;
+	color: blue;
+}
+.blog_img{
+	overflow: hidden;
+	
+}
+.blog img{
+	max-width: 100%;
+	max-height: 100%;
+	transition: all 1s;
+}
+.blog img:hover{
+	transform: scale(1.2,1.2);
+}
+.blog .abs_text{
+	top: 211px;	
+	width: 80%;
+	background-color: white;
+	padding: 15px 30px;
+}
+
+.blog .abs_text h5{
+	font-weight: bolder;
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
+.blog .abs_text p{
+	margin-top: 30px;
+}
+
+.blog .abs_article{
+	top: 0;
+	bottom: 0;
+	width: 80%;
+	display: none;
+	background-color: white;
+	padding: 30px 40px;
+	/*transition: all 1s;*/
+}
+.blog .abs_article p{
+	margin-top: 40px;
+	font-size: 15px;
+	color: #888888;
+}
+.blog .abs_article h5{
+	font-weight: bolder;
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+.blog .abs_article a{
+	display: block;
+	margin-top: 60px;
+	font-size: 13px;
+	font-weight: bold;
+	color: blue;
+}
