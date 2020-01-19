@@ -167,3 +167,31 @@ input[type="search"]:focus{
 }
 
 /*footer*/
+
+
+/*Contact.html*/
+.contact_us{
+	margin-top: 90px;
+	padding: 50px;
+}
+.contact_us h2{
+	font-weight: bolder;
+	margin-bottom: 40px;
+}
+.contact_us p{
+	font-size: 13px;
+}
+.contact p b{
+	letter-spacing: 1px;
+}
+.contact_us p:first-of-type{
+	color: #9F9FA0;
+	font-size: 17px;
+	margin-bottom: 70px;
+	letter-spacing: normal;
+}
+.contact_us a{
+	display: block;
+	color: #7F8081;
+	margin-top :70px;
+}
