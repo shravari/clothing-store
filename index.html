@@ -11,6 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css"> -->
 </head>
 <body>
 	<!-- Navbar  -->
@@ -123,6 +126,94 @@
 		</div>
 	</div>
 	<!-- Global sale banner -->
+
+	<!-- Product carousel -->
+
+	<div class="container product_carousel">
+		<h3>Popular Products</h3>
+		<div class="owl-carousel owl-theme">
+			<div class="item xyz">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-1.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p><span>$75.00</span>&nbsp; $55.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-2.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p>$80.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-3.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p><span>$75.00</span>&nbsp; $55.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-4.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p><span>$75.00</span>&nbsp; $55.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-5.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p><span>$75.00</span>&nbsp; $55.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-8.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p>$80.00</p>
+					<button>ADD TO CART</button>
+			</div>
+
+			<div class="item">
+				<div class="like_product">
+					<i class="fa fa-heart" aria-hidden="true"></i>
+				</div>
+				<img src="images/product-img/product-7.jpg">
+				<p>TOPSHOP</p>
+				<h6>One Shoulder Glitter Midi Dress</h6>
+				<p><span>$75.00</span>&nbsp; $55.00</p>
+					<button>ADD TO CART</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- Product carousel -->
+
 	<!-- Brands -->
 	<div class="container-fluid p-5 brands text-center">
 		<div class="row my-3 pt-2">
@@ -200,9 +291,44 @@
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/page_essence.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 
 <script type="text/javascript">
-	
+	 $(document).ready(function(){
+
+		 	$('.owl-carousel').owlCarousel({
+		 		loop:true,
+			    margin:20,
+			    nav:false,
+			    dotsEach:1,
+			    autoplay:true,
+			    autoplayHoverPause:true,
+			    autoplayTimeout:3000,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:2
+			        },
+			        1000:{
+			            items:4
+			        }
+			    }
+			});
+
+			// var disp_heart = document.getElementsByClassName("item");
+			// disp_heart.addEventListener("mouseenter", function( event ) {
+			// 	event.target.style.display = 'block';
+			// });
+
+			// $('.item').hover(function(e){
+			// 	console.log($(this+'.like_product'));
+			// 	// $('.like_product').css('display','block');
+			// })
+
+
+		});
 </script>
 
 </body>

@@ -7,7 +7,7 @@ nav{
 	/*overflow: hidden;*/
 	width: 100%;
 	position: static;
-	z-index: 1;
+	z-index: 10;
 	top: 0;
 	background-color: white;
 	border-bottom: 1px solid #CAC6C6;
@@ -144,6 +144,81 @@ input[type="search"]:focus{
 	height: auto;
 }
 
+/*product carousel*/
+.product_carousel{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	position: relative;
+}
+.product_carousel h3{
+	font-weight: bolder;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.product_carousel img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.product_carousel p{
+	font-weight: bold;
+}
+.product_carousel p:first-of-type{
+	margin-top: 20px;
+	font-size: 12px;
+	color: #888888;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.product_carousel h6{
+	font-weight: bolder;
+	margin-top: 0;
+}
+.product_carousel span{
+	text-decoration: line-through;
+	color: #A2A1A1;
+	font-weight: bold;
+}
+.like_product{
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	width: 50px;
+	height: 25px;
+	background-color: rgb(255,255,255);
+	color: #CFCFCF;
+	text-align: center;
+	box-shadow: 0px 0px 5px #CAC8C8;
+}
+.product_carousel button{
+	display: none;
+	position: absolute;
+	top: 288px;
+	right: 20px;
+	left: 18px;
+	color: white;
+	background-color: blue;
+	border:none;
+	height: 50px;
+	width: 80%;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.product_carousel button:hover{
+	background-color: #FC3550;
+}
+.product_carousel .item:hover button{
+	display: block;
+}
+.product_carousel .item:hover .like_product{
+	display: block;
+}
+/*product carousel*/
+
 /*footer*/
 .footer{
 	padding: 60px;
@@ -220,14 +295,14 @@ input[type="search"]:focus{
 	overflow: hidden;
 	
 }
-.blog img{
+.blog_img img{
 	max-width: 100%;
 	max-height: 100%;
 	transition: all 1s;
 }
-.blog img:hover{
+/*.blog_img img:hover{
 	transform: scale(1.2,1.2);
-}
+}*/
 .blog .abs_text{
 	top: 211px;	
 	width: 80%;
@@ -252,7 +327,13 @@ input[type="search"]:focus{
 	display: none;
 	background-color: white;
 	padding: 30px 40px;
-	/*transition: all 1s;*/
+	opacity: 0.6;
+	transition: all 2s;
+}
+.dis:hover .abs_article{
+	display: block;
+	opacity: 1;
+	/*transform: scale(1.2,1.2);*/
 }
 .blog .abs_article p{
 	margin-top: 40px;
