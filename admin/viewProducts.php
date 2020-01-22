@@ -36,6 +36,7 @@ $query1 = mysqli_query($connect, $select1);
                     <th>Name</th>
                     <th>Price</th>
                     <th>Category</th>
+                    <th>Quantity</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Action</th>
@@ -54,6 +55,7 @@ $query1 = mysqli_query($connect, $select1);
                     <td><?php echo $res['price']; ?></td>
                     <td><?php echo $res['category_name'];
                     ?></td>
+                    <td><?php echo $res['quantity']; ?></td>
                     <td><?php echo $res['description']; ?></td>
                     <td><img src="../images/product-img/<?php echo $image; ?>" width="150px" height="150px" data-toggle="modal" data-target="#viewImageModal" onclick="view_details(<?php echo $res['id']; ?>);"></td>
 
@@ -104,11 +106,18 @@ $query1 = mysqli_query($connect, $select1);
                   <input type="number" class="form-control" placeholder="100.00" name="price">
                 </div>
                </div>
-               <div class="form-row mt-3">
-                <div class="col-md-3">
-                  <label>Select Category:</label>
-                </div>
-                <div class="col-md-9">
+
+                <div class="form-row mt-3">
+              <div class="col-md-6">
+                 <label>Select Category:</label>
+              </div>
+              <div class="col-md-6">
+                <label>Quantity:</label>
+              </div>
+               </div>
+
+               <div class="form-row">
+                <div class="col-md-6">
                   <select class="form-control" id="category" name="category">
                     <option selected="true" disabled="disabled">Available Categories</option>
                    <?php while ($res1 = mysqli_fetch_assoc($query1)) { ?>
@@ -116,9 +125,12 @@ $query1 = mysqli_query($connect, $select1);
                     <?php } ?> 
                   </select>
                 </div>
+                <div class="col-md-6">
+                  <input type="number" class="form-control" placeholder="No. of items in inventory" name="quantity">
+                </div>
                </div>
                <div class="form-row mt-2">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <a href="addCategory.php" class="float-right">Add New Category</a>
                 </div>
                </div>

@@ -38,11 +38,18 @@
               <input type="number" class="form-control" placeholder="100.00" name="price">
             </div>
            </div>
-           <div class="form-row mt-3">
-            <div class="col-md-3">
-              <label>Select Category:</label>
-            </div>
-            <div class="col-md-9">
+
+            <div class="form-row mt-3">
+              <div class="col-md-6">
+                 <label>Select Category:</label>
+              </div>
+              <div class="col-md-6">
+                <label>Quantity:</label>
+              </div>
+           </div>
+
+           <div class="form-row">
+            <div class="col-md-6">
               <select class="form-control" id="category" name="category">
                 <option selected="true" disabled="disabled" value="Available Categories">Available Categories</option>
                <?php while ($res = mysqli_fetch_assoc($query)) { ?>
@@ -50,10 +57,13 @@
                 <?php } ?> 
               </select>
             </div>
+            <div class="col-md-6">
+                  <input type="number" class="form-control" placeholder="No. of items in inventory" name="quantity">
+            </div>
            </div>
            <div class="form-row mt-2">
-            <div class="col-md-12">
-              <a href="addCategory.php" class="float-right">Add New Category</a>
+            <div class="col-md-6">
+              <a href="addCategory.php" class="">Add New Category</a>
             </div>
            </div>
            <div class="form-row mt-3">

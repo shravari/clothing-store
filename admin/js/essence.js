@@ -117,6 +117,7 @@ function clearInput() {
           $('input[name="name"]').val(res['product_name']);
           $('input[name="price"]').val(res['price']);
           $('input[name="id"]').val(res['id']);
+          $('input[name="quantity"]').val(res['quantity']);
           $('textarea[name="description"]').val(res['description']);
           var x = res['category_id'];
           $('option[value='+x+']').attr('selected', true);

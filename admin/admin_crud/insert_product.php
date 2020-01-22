@@ -7,11 +7,14 @@
 	$price = $_POST['price'];
 	$category = $_POST['category'];
 	$description = $_POST['description'];
+	$quantity = $_POST['quantity'];
 	$images = '';
 	$i = 0;
 	// echo "<pre>";
 	// print_r($_FILES);
 	// echo "</pre>";
+
+	//This while loop is to get multiple images into a single variable in a string format
 	while ($i < count($_FILES['image']['name'])) {
 		if ($i == (count($_FILES['image']['name'])-1)) {
 			$images .= Date('ymdhis').$_FILES['image']['name'][$i];
@@ -28,7 +31,7 @@
 			$i++;
 		}
  	}
-	 $insert = "INSERT INTO products(category_id ,	product_name, price, description, images) values('$category','$name', '$price', '$description', '$images')";
+	 $insert = "INSERT INTO products(category_id ,	product_name, price, description, images, quantity) values('$category','$name', '$price', '$description', '$images', $quantity)";
 	mysqli_query($connect, $insert);
 	header('Location:../addProducts.php?add=1');
 
