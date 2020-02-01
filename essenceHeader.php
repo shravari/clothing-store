@@ -51,8 +51,19 @@
     	<li class="nav-item">
         <a class="nav-link nav_fa px-3" href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav_fa px-3" href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link nav_fa px-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user-o" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Name</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Orders</a>
+          <a class="dropdown-item" href="#">Wishlist</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Edit Profile</a>
+          <a class="dropdown-item" href="#">LogOut</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link nav_fa px-3" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"><sup class="badge badge-light"> <?php if (array_key_exists('cart',$_SESSION)) { echo count($_SESSION['cart']); } ?> </sup></i></a>
