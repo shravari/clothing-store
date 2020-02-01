@@ -75,7 +75,11 @@
 	</div>
 </div>
 <!-- blog banner -->
-
+<?php 
+	require_once('admin/admin_crud/config.php');
+	$select_products = "SELECT * from products";
+	$query = mysqli_query($connect, $select_products);
+ ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-3">
@@ -85,39 +89,25 @@
 		<div class="col-md-9">
 			<div class="container product">
 				<div class="row">
-					<div class="col-md-4 shop">
+				<?php 
+					while ($res= mysqli_fetch_assoc($query)) {
+						$image = substr($res['images'], 0,strpos($res['images'],','));
+				 ?>
+					<div class="col-md-4 shop mt-3">
 						<div class="like_products">
 							<button onclick="like(this);"><i class="fa fa-heart" aria-hidden="true"></i></button>
 						</div>
-						<img src="images/product-img/product-1.jpg">
+						<a href="product.php?id=<?php echo $res['id'];?>"><img src="images/product-img/<?php echo $image; ?>"></a>
 						<p>TOPSHOP</p>
-						<h6>One Shoulder Glitter Midi Dress</h6>
-						<p><span>$75.00</span>&nbsp; $55.00</p>
-							<button class="cart">ADD TO CART</button>
+						<a href="product.php?id=<?php echo $res['id'];?>"><h6><?php echo $res['product_name']; ?></h6></a>
+						<p>$<?php echo $res['price']; ?>.00</p>
+							<button class="cart" onclick="add_to_cart(<?php echo $res['id']; ?>);">ADD TO CART</button>
 					</div>
-
-					<div class="col-md-4 shop">
-						<div class="like_products">
-							<button onclick="like(this);"><i class="fa fa-heart" aria-hidden="true"></i></button>
-						</div>
-						<img src="images/product-img/product-2.jpg">
-						<p>TOPSHOP</p>
-						<h6>One Shoulder Glitter Midi Dress</h6>
-						<p>$80.00</p>
-							<button class="cart">ADD TO CART</button>
-					</div>
-
-					<div class="col-md-4 shop">
-						<div class="like_products">
-							<button onclick="like(this);"><i class="fa fa-heart" aria-hidden="true"></i></button>
-						</div>
-						<img src="images/product-img/product-3.jpg">
-						<p>TOPSHOP</p>
-						<h6>One Shoulder Glitter Midi Dress</h6>
-						<p><span>$75.00</span>&nbsp; $55.00</p>
-							<button class="cart">ADD TO CART</button>
-					</div>
-				</div>
+				
+				<?php 
+					}
+				 ?>
+				 </div>
 			</div>
 		</div>
 	</div>

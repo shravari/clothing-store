@@ -96,12 +96,17 @@ session_start();
   <script src="js/jquery.dataTables.min.js"></script>
   <script src="js/dataTables.bootstrap4.min.js"></script>
   <script src="js/datatables-demo.js"></script>
+  <script src="js/sweetalert.min.js"></script>
 <script type="text/javascript">
   var currentUrl = $(location).attr('href');  
     if (currentUrl.match(/edit=1/g)) {
-       alert("Category name edited successfully!");
-        window.location.assign('viewCategory.php');
-
+       swal({
+          title: "Great!",
+          text: "Category name has been edited successfully!",
+          icon: "success",
+          button: "OK!",
+        });
+        window.history.pushState({}, "Hide", "viewCategory.php");
     }
 </script>
 

@@ -11,3 +11,14 @@ $( document ).ready(function() {
 			}
 		});
 	});
+
+
+function view_image(name){
+      var image_name = name.src;
+      var index = image_name.search('images');
+      $('.mainImage').attr('src',image_name.slice(index));
+    } 
+
+ function add_to_cart(product){
+ 	console.log(product);
+ }

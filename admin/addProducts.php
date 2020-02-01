@@ -93,7 +93,12 @@
   <script type="text/javascript">
       var currentUrl = $(location).attr('href');  
       if (currentUrl.match(/add=1/g)) {
-         alert("Product added successfully!");
+         swal({
+            title: "Good job!",
+            text: "Product added successfully !",
+            icon: "success",
+            button: "OK!",
+          });
           window.history.pushState({}, "Hide", "http://localhost/shravari/essence/admin/addProduct.php");
 
       }

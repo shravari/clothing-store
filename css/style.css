@@ -418,6 +418,13 @@ input[type="search"]:focus{
 	text-align: center;
 	box-shadow: 0px 0px 5px #CAC8C8;
 }
+.shop a{
+	text-decoration: none;
+	color: black;
+}
+.shop p:nth-of-type(2){
+	color: #5B5A5A;
+}
 .shop .like_products button{
 	border:none;
 	font-size: 15px;
@@ -427,7 +434,7 @@ input[type="search"]:focus{
 .product .cart{
 	display: none;
 	position: absolute;
-	bottom: 140px;
+	bottom: 150px;
 	right: 20px;
 	left: 18px;
 	color: white;
@@ -450,39 +457,30 @@ input[type="search"]:focus{
 .shop:hover .like_products{
 	display: block;
 }
-/*.shop .like_products{
-	display: none;
-	position: absolute;
-	top: 10px;
-	right: 25px;
-	width: 50px;
-	height: 25px;
-	background-color: rgb(255,255,255);
-	color: #CFCFCF;
-	text-align: center;
-	box-shadow: 0px 0px 5px #CAC8C8;
-}
-.shop .cart{
-	display: none;
-	position: absolute;
-	top: 210px;
-	right: 55px;
-	left: 18px;
-	color: white;
-	background-color: blue;
-	border:none;
-	height: 40px;
-	width: 70%;
-	margin-right: 10px;
-	margin-left: 10px;
-	font-size: 12px;
-	font-weight: bold;
-	letter-spacing: 2px;
-}*/
-/*.product_carousel .col-md-4:hover .like_product{
-	display: block;
-}
-.product_carousel .col-md-4:hover button{
-	display: block;
-}*/
+
 /*shop.html*/
+
+
+.product_page{
+	margin: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.product_page h1,h3{
+	margin: 20px;
+}
+.product_page button{
+	margin: 20px;
+	margin-top: 40px;
+	border:none;
+	border-radius: 2px;
+	background-color: blue;
+	color: white;
+	padding: 15px 30px;
+	width: 40%;
+	font-size: 18px;
+}
+.product_page p{
+	margin: 20px;
+	font-size: 17px;
+}

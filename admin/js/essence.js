@@ -18,7 +18,12 @@ function clearInput() {
           $('#erroru').css('display','block');
 
         }else{
-          alert("Category added successfully!");
+          swal({
+            title: "Good job!",
+            text: "Category added successfully!",
+            icon: "success",
+            button: "OK!",
+          });
            $('input[name=category_name').val("");
           $('#erroru').css('display','none');
         }
@@ -44,18 +49,33 @@ function clearInput() {
 
 
   function delete_category(id){
-    var check = confirm("Sure, You want to delete?");
-    if (check == true) {
+     swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
       $.ajax({
         'url' : 'admin_crud/delete_category.php',
         'data' : 'id='+id,
         'method' : 'post',
         'success' : function(response){
-            alert(response);
-            window.location.assign('viewCategory.php');
+          console.log(response);
+            swal("Poof! Your Category has been deleted!", {
+      icon: "success",});
+            window.history.pushState({}, "Hide", "viewCategory.php");
         }
       });
+      
     } 
+    else {
+      swal("Your Category is safe!");
+    }
+  }); 
+
   }
 
   function del_product(id){
@@ -86,7 +106,7 @@ function clearInput() {
           var image = res.images;
           var arr = image.split(',');
           var x = $('.mainImage');
-          if (x[0].src != 'http://localhost/shravari/essence/images/product-img/'+arr[0]) {
+          if (x[0].src != '../images/product-img/'+arr[0]) {
             $('#imageDiv').empty(); //emptied the div because the previous product images(i.e the small images on the right) 
             //where also displayed and the new product images were getting appended due to append method
              for (var i =0 ; i < arr.length; i++) {

@@ -44,7 +44,7 @@
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/sb-admin-2.min.js"></script>
 <script src="js/essence.js"></script>
-
+<script src="js/sweetalert.min.js"></script>
 
 
 </body>
