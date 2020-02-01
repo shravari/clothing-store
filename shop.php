@@ -1,72 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Blog</title>
-	<meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
-</head>
-<body>
-	<!-- Navbar  -->
-		<nav class="navbar navbar-expand-lg px-5">
-  <a class=" nav_brand" href="index.html"><img src="images/core-img/logo.png" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon text-light"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto pt-2 pl-3">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shop
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Pages
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="blog.html">Blog</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-      
-    </ul>
-    <form class="form-inline my-2 my-lg-0 pt-2">
-      <button class="btn bg-transparent"><i class="fa fa-search" aria-hidden="true"></i></button><input class="mr-sm-2" type="search" placeholder="Type to search" aria-label="Search">
-    </form>
-    <ul class="navbar-nav">
-    	<li class="nav-item">
-        <a class="nav-link nav_fa px-3" href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav_fa px-3" href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav_fa px-3" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"><sup class="badge badge-light">4</sup></i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-	<!-- Navbar  -->
+<?php 
+	// session_start();
+	require_once('essenceHeader.php');
+ ?>
 
 <!-- blog banner -->
 <div class="shop_blog_banner">

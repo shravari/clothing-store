@@ -20,5 +20,13 @@ function view_image(name){
     } 
 
  function add_to_cart(product){
- 	console.log(product);
+ 	$.ajax({
+ 		url : 'addToCart.php',
+ 		data :'id='+product,
+ 		method : 'get',
+ 		dataType: 'json',
+ 		success : function(response){
+ 			$('sup').text(response.length);
+ 		}
+ 	});
  }
